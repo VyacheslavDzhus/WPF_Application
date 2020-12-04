@@ -1,0 +1,12 @@
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\DAL.dll.config
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\DAL.dll
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\DAL.pdb
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\EntityFramework.dll
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\EntityFramework.xml
+E:\C# WPF\Final Project\FinalProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\C# WPF\Final Project\FinalProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\C# WPF\Final Project\FinalProject\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\C# WPF\Final Project\FinalProject\DAL\obj\Debug\DAL.dll
+E:\C# WPF\Final Project\FinalProject\DAL\obj\Debug\DAL.pdb
+E:\C# WPF\Final Project\FinalProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

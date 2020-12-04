@@ -1,0 +1,13 @@
+﻿<Application x:Class="FinalProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FinalProject"
+             xmlns:locators="clr-namespace:FinalProject.Infrastructure" 
+             StartupUri="Views/StartView.xaml">
+
+    <Application.Resources>
+        <locators:ViewModelsLocator x:Key="vmlocator"></locators:ViewModelsLocator>
+       
+    </Application.Resources>
+  
+</Application>

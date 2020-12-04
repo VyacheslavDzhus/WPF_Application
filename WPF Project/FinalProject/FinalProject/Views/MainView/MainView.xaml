@@ -1,0 +1,30 @@
+﻿<Window x:Class="FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:languages="clr-namespace:FinalProject.Properties"
+        xmlns:vm="clr-namespace:FinalProject.ViewModels"
+        xmlns:local="clr-namespace:FinalProject"           
+        mc:Ignorable="d"
+        Height="607" Width="1030" DataContext="{StaticResource vmlocator}">
+    <Grid DataContext="{Binding MainViewModel}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0">
+            <StackPanel >
+                <Button Height="114" FontSize="20" Content="{x:Static languages:Resources.Games}" Command="{Binding FirstViewCommand}"></Button>
+                <Button Height="114" FontSize="20" Content="{x:Static languages:Resources.Description}" Command="{Binding SecondViewCommand}"></Button>
+                <Button Height="114" FontSize="20" Content="{x:Static languages:Resources.Edit}" Command="{Binding ThirdViewCommand}"></Button>
+                <Button Height="114" FontSize="20" Content="{x:Static languages:Resources.addGame}"    Command="{Binding FourthViewCommand}"></Button>
+                <Button Height="114" FontSize="20" Content="{x:Static languages:Resources.Save}" Command="{Binding FifthViewCommand}"></Button>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1">
+            <ContentControl   Height="560" Width="800" Content="{Binding CurrentView}"></ContentControl>
+        </Border>
+    </Grid>
+</Window>

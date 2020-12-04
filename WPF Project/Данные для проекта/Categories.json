@@ -1,0 +1,34 @@
+[
+  {
+    "CategoryId": 1,
+    "CategoryName": "Shooter"
+  },
+  {
+    "CategoryId": 2,
+    "CategoryName": "Advanture"
+  },
+  {
+    "CategoryId": 3,
+    "CategoryName": "Action"
+  },
+  {
+    "CategoryId": 4,
+    "CategoryName": "Racing"
+  },
+  {
+    "CategoryId": 5,
+    "CategoryName": "RPG"
+  },
+  {
+    "CategoryId": 6,
+    "CategoryName": "Simulator"
+  },
+  {
+    "CategoryId": 7,
+    "CategoryName": "Puzzle"
+  },
+  {
+    "CategoryId": 8,
+    "CategoryName": "Fighting"
+  }
+]

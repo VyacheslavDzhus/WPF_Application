@@ -1,0 +1,66 @@
+[
+  {
+    "ManufacturerId": 1,
+    "ManufacturerName": "Rockstar Games"
+  },
+  {
+    "ManufacturerId": 2,
+    "ManufacturerName": "ID Software"
+  },
+  {
+    "ManufacturerId": 3,
+    "ManufacturerName": "CD Projekt RED"
+  },
+  {
+    "ManufacturerId": 4,
+    "ManufacturerName": "Bethesda Softworks"
+  },
+  {
+    "ManufacturerId": 5,
+    "ManufacturerName": "Electronic Arts"
+  },
+  {
+    "ManufacturerId": 6,
+    "ManufacturerName": "Dontnod Etertainment"
+  },
+  {
+    "ManufacturerId": 7,
+    "ManufacturerName": "Valve"
+  },
+  {
+    "ManufacturerId": 8,
+    "ManufacturerName": "Facepunch Studios"
+  },
+  {
+    "ManufacturerId": 9,
+    "ManufacturerName": "Mojang"
+  },
+  {
+    "ManufacturerId": 10,
+    "ManufacturerName": "Overkill Software"
+  },
+  {
+    "ManufacturerId": 11,
+    "ManufacturerName": "WB Games"
+  },
+  {
+    "ManufacturerId": 12,
+    "ManufacturerName": "Devolver Digital"
+  },
+  {
+    "ManufacturerId": 13,
+    "ManufacturerName": "Ubisoft"
+  },
+  {
+    "ManufacturerId": 14,
+    "ManufacturerName": "2K Czech"
+  },
+  {
+    "ManufacturerId": 15,
+    "ManufacturerName": "GSG Game World"
+  },
+  {
+    "ManufacturerId": 16,
+    "ManufacturerName": "Activision"
+  }
+]

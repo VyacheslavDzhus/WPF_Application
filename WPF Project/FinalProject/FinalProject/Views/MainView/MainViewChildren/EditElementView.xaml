@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="FinalProject.Views.MainView.MainViewChildren.EditElementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinalProject.Views.MainView.MainViewChildren"
+             xmlns:languages="clr-namespace:FinalProject.Properties"
+             xmlns:vm="clr-namespace:FinalProject.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="560" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:EditElementViewModel></vm:EditElementViewModel>
+    </UserControl.DataContext>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="2">
+            <Label FontSize="22" Content="{x:Static languages:Resources.Manufacturer}"></Label>
+            <Border Margin ="50 10 0 0" Width="150" Height="25">
+                <ComboBox  ItemsSource="{Binding Manufacturers}" SelectedItem="{Binding SelectedGame.ManufacturerName}" SelectedIndex="{Binding SelectedGame.ManufacturerId}"></ComboBox>
+            </Border>
+        </WrapPanel>
+        <WrapPanel Grid.Row="3">
+            <Label FontSize="22" Content="{x:Static languages:Resources.Category}" Height="39"></Label>
+            <Border  Margin ="50 10 0 0" Width="150" Height="25">
+            <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedGame.CategoryName}" SelectedIndex="{Binding SelectedGame.CategoryId}"></ComboBox>
+            </Border>
+        </WrapPanel>
+        <WrapPanel DataContext="{Binding SelectedGame}" Grid.Row="0">
+            <Border  Margin="5 5 0 5" >
+            <Image Source="{Binding ImagePath}" Stretch="Uniform"></Image>
+            </Border>
+            <GroupBox Margin="20 40 0 0" Height="92">
+                <StackPanel >
+                    <RadioButton FontSize="15" Margin="0 10 0 10" Checked="URLRadioButton_Checked" Content="{x:Static languages:Resources.inputURLimage}"></RadioButton>
+                    <RadioButton FontSize="15"  Checked="LocalRadioButton_Checked" Content="{x:Static languages:Resources.chooseLocalimage}"></RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel Width="344">
+                <Border  Height="27" Margin="10,30,0,20">
+                <TextBox x:Name="textBox" IsEnabled="False"  Text="{Binding ImagePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Border>
+                <Button  x:Name="btnChoose" IsEnabled="False" FontSize="25"  Content="{x:Static languages:Resources.choose}"  Command="{Binding LoadCommand}" Width="150" Height="50"/>
+            </StackPanel>
+        </WrapPanel>
+        <WrapPanel DataContext="{Binding SelectedGame}" Grid.Row="1">
+            
+            <Label FontSize="22" Content="{x:Static languages:Resources.Title}"></Label>
+            <Border Margin="10 10 0 0" Height="25" >
+            <TextBox  Width="250" Text="{Binding GameName , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </Border>
+        </WrapPanel>
+        <WrapPanel Grid.Row="4">
+            <Label FontSize="22" Content="{x:Static languages:Resources.ReleaseDate}"></Label>
+            <Border Margin ="50 10 0 0" Width="50" Height="25">
+            <ComboBox ItemsSource="{Binding DayValues}" SelectedValue="{Binding ReleaseDatePartOne}">
+            </ComboBox>
+            </Border>
+            <Label FontSize="20" Margin="0 5 0 0">.</Label>
+            <Border Margin ="0 10 0 0" Width="50" Height="25">
+            <ComboBox  SelectedValue="{Binding ReleaseDatePartTwo}" ItemsSource="{Binding MonthValues}" >
+            </ComboBox>
+            </Border>
+            <Label FontSize="20" Margin="0 5 0 0">.</Label>
+            <Border Margin ="0 10 0 0" Width="60" Height="25">
+            <ComboBox  SelectedValue="{Binding ReleaseDatePartThree}" ItemsSource="{Binding YearValues}" >
+            </ComboBox>
+            </Border>
+        </WrapPanel>
+        <WrapPanel Grid.Row="5"   Height="36" DataContext="{Binding SelectedGame}">
+
+            <Label FontSize="22" Content="{x:Static languages:Resources.Price}"></Label>
+            <Border Margin="10 0 10 0" Width="60" Height="30">
+                <TextBox FontSize="15" MaxLength="4"  Text="{Binding Price , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"  ></TextBox>
+            </Border>
+            <Label FontSize="22">$</Label>
+
+        </WrapPanel>
+        <WrapPanel Grid.Row="6"  Height="36" >
+
+            <Label FontSize="22" Content="{x:Static languages:Resources.Popularity}" Height="40"></Label>
+            <Border Margin="10 0 10 0" Width="60" Height="30" >
+            <ComboBox  FontSize="16" ItemsSource="{Binding PopularityValues}" SelectedValue="{Binding SelectedGame.Popularity}">
+            </ComboBox>
+            </Border>
+            <Label FontSize="22">/10</Label>
+
+        </WrapPanel>
+        <StackPanel Grid.Row="7" Margin="0,0,0,10">
+            <Label FontSize="20" Content="{x:Static languages:Resources.Description}"></Label>
+            <Border>
+            <TextBox  Text="{Binding SelectedGame.Description , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Height="80"></TextBox>
+            </Border>
+        </StackPanel>
+        <Button Grid.Row="8" Margin="300,10" Width="200" Content="{x:Static languages:Resources.Edit}" Command="{Binding EditCommand}"></Button>
+    </Grid>
+</UserControl>
